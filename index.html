@@ -12,64 +12,101 @@
 <body class="bg-gray-50 text-gray-900 font-sans">
 
   <!-- ✅ Navbar -->
-  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-2xl font-bold text-indigo-600">Devaraj S</h1>
-      <nav class="hidden md:flex space-x-8">
-        <a href="#home" class="hover:text-indigo-600">Home</a>
-        <a href="#journey" class="hover:text-indigo-600">Journey</a>
-        <a href="#skills" class="hover:text-indigo-600">Skills</a>
-        <a href="#projects" class="hover:text-indigo-600">Projects</a>
-        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+  <header class="fixed top-0 left-0 w-full z-50 bg-transparent">
+    <div class="container mx-auto flex justify-between items-center py-5 px-6 lg:px-20">
+      
+      <div class="flex items-center space-x-2">
+        <svg class="w-8 h-8 text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d=""/>
+        </svg>
+        <h1 class="text-2xl font-bold text-gray-900 hidden sm:block"></h1>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-2 bg-white/80 backdrop-blur-md px-6 py-3 rounded-full shadow-md border border-gray-200">
+        <a href="#home" class="relative font-semibold text-gray-800 px-4 py-2 rounded-full transition-all duration-300 hover:text-blue-600 hover:bg-blue-50 group">
+          Home
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#journey" class="relative font-semibold text-gray-800 px-4 py-2 rounded-full transition-all duration-300 hover:text-blue-600 hover:bg-blue-50 group">
+          Journey
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#skills" class="relative font-semibold text-gray-800 px-4 py-2 rounded-full transition-all duration-300 hover:text-blue-600 hover:bg-blue-50 group">
+          Skills
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#projects" class="relative font-semibold text-gray-800 px-4 py-2 rounded-full transition-all duration-300 hover:text-blue-600 hover:bg-blue-50 group">
+          Projects
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#contact" class="relative font-semibold text-gray-800 px-4 py-2 rounded-full transition-all duration-300 hover:text-blue-600 hover:bg-blue-50 group">
+          Contact
+          <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
       </nav>
-      <a href="#contact" class="md:hidden bg-indigo-600 text-white px-4 py-2 rounded-lg">Hire Me</a>
+
+      <button class="md:hidden text-gray-800 text-3xl hover:text-blue-600 transition-transform duration-300 hover:rotate-90">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-24">
+  <section id="home" class="relative bg-white-50 pt-40 pb-32 min-h-screen flex items-center">
     <div class="container mx-auto px-6 lg:px-20">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
-        <!-- Left Content -->
-        <div class="space-y-6 text-center lg:text-left">
-          <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
-            Hi, I'm <span class="text-yellow-300">Devaraj S</span>
+        <div class="space-y-6 text-center lg:text-left order-2 lg:order-1">
+          
+          <h1 class="text-6xl md:text-7xl font-extrabold text-gray-900 tracking-tight">
+            Devaraj S
           </h1>
-          <p class="text-lg md:text-xl text-gray-100 max-w-lg mx-auto lg:mx-0">
-            A passionate <span class="font-semibold">Data Analyst</span> who loves turning raw data into meaningful insights. Skilled in Power BI, SQL, Python, and Machine Learning.
+          <p class="text-2xl font-bold text-blue-600 mb-6">
+            Data Analyst
           </p>
           
-          <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
-            <a href="#projects" class="bg-yellow-400 text-gray-900 font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-yellow-300 transition-transform transform hover:scale-105">
-              🚀 View My Projects
+          <div class="space-y-4 text-lg text-gray-700 max-w-lg mx-auto lg:mx-0">
+            <p>
+              My passion is turning raw data into meaningful insights that drive effective business decisions. I love solving real problems with numbers.
+            </p>
+            <p>
+              I specialize in Power BI, SQL, and Python to deliver clear, actionable data stories.
+            </p>
+          </div>
+          
+          <div class="flex justify-center lg:justify-start gap-4 text-2xl pt-4">
+            <a href="https://github.com/Devaraj012" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+              <i class="fa-brands fa-github"></i>
             </a>
-            <a href="https://drive.google.com/file/d/1arIrpTWk4FpFa41S-GMvHg59tKGOfO8q/view?usp=sharing" target="_blank" class="bg-white text-indigo-700 font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105">
-              📄 Download Resume
+            <a href="https://www.linkedin.com/in/devaraj-s-841bb7207" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:devarajsn0901@email.com" class="text-gray-600 hover:text-blue-600 transition">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-8">
+            <a href="#contact" class="flex items-center justify-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition-all transform hover:scale-[1.03]">
+              <i class="fa-solid fa-paper-plane mr-2"></i> Hire Me
+            </a>
+            <a href="https://drive.google.com/file/d/1arIrpTWk4FpFa41S-GMvHg59tKGOfO8q/view?usp=sharing" target="_blank" class="flex items-center justify-center bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg border-2 border-blue-600 shadow-md hover:bg-blue-50 transition-all transform hover:scale-[1.03]">
+              <i class="fa-solid fa-download mr-2"></i> Resume
             </a>
           </div>
         </div>
         
-        <!-- Right Content (Image) -->
-        <div class="flex justify-center lg:justify-end">
-          <div class="w-48 md:w-60 lg:w-72 aspect-square rounded-full overflow-hidden border-4 border-white shadow-2xl">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQEeaRtwfFIUlg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727976041463?e=1758758400&v=beta&t=if2RZEnGjUkhcmkk8Ao99O2qoCduVkoEkfSuWWBiy90" alt="Devaraj S" class="w-full h-full object-cover">
+        <div class="flex justify-center lg:justify-end order-1 lg:order-2">
+          <div class="w-64 md:w-80 lg:w-96 aspect-square rounded-full overflow-hidden border-8 border-gray-200 shadow-2xl">
+            <img src="Dev.jpg" alt="Devaraj S" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Decorative Shape -->
-    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-      <svg class="relative block w-full h-16 text-white" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1200 120">
-        <path d="M0,0V46.29c47.27,22.24,104.12,29,158,17.39C230.34,49.44,284.42,15.52,339,1.32c54.59-14.21,108.68-6.61,162,9.17C559.3,30.27,613.38,60.73,667,64.34c53.62,3.61,107.7-19.09,161-35.41,53.29-16.33,107.37-26.13,161-17.39,53.62,8.74,107.7,36.24,161,41.13,53.29,4.89,107.37-14.09,134-24.83V0Z" fill="currentColor"></path>
-      </svg>
-    </div>
   </section>
 
+
   <!-- Journey Section -->
-  <section id="journey" class="relative py-24 bg-gray-50">
+  <section id="journey" class="relative py-24 bg-white-50">
     <div class="max-w-6xl mx-auto px-6 lg:px-20">
 
       <!-- Heading -->
@@ -287,7 +324,7 @@
   </script>
 
 <!-- Skills Section -->
-<section id="skills" class="relative bg-gradient-to-b from-white to-gray-50 py-16">
+<section id="skills" class="relative bg-white-50 py-16">
   <div class="container mx-auto px-6 lg:px-20">
 
     <!-- Heading -->
@@ -425,7 +462,7 @@
           <!-- Postman -->
           <span class="px-4 py-2 flex items-center gap-2 bg-white shadow-sm border rounded-full text-sm">
             <img
-              src="https://seeklogo.com/images/P/postman-logo-F43375A2EB-seeklogo.com.png"
+              src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png"
               class="w-5 h-5"
               alt="Postman Logo"
             >
@@ -440,7 +477,7 @@
 
 
 <!-- Projects Section -->
-<section id="projects" class="py-20 bg-gray-50">
+<section id="projects" class="py-20 bg-white-50">
   <div class="px-6 lg:px-20 max-w-7xl mx-auto">
     <!-- Heading -->
     <div class="text-center mb-16">
@@ -536,7 +573,7 @@
 </script>
 
 <!-- Contact Section -->
-<section id="contact" class="bg-gradient-to-b from-gray-50 to-gray-100 py-20 text-center">
+<section id="contact" class="bg-gradient-to-b from-white-50 to-gray-100 py-20 text-center">
 
   <!-- Heading -->
   <h2 class="text-4xl font-bold text-gray-900">
@@ -554,12 +591,12 @@
       <i class="fa-solid fa-envelope"></i>
     </a>
     <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" 
+    <a href="https://www.linkedin.com/in/devaraj-s-841bb7207" target="_blank" 
        class="flex items-center justify-center w-16 h-16 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 hover:scale-110 transition-transform shadow-lg">
       <i class="fa-brands fa-linkedin-in"></i>
     </a>
     <!-- GitHub -->
-    <a href="https://github.com/your-github" target="_blank" 
+    <a href="https://github.com/Devaraj012" target="_blank" 
        class="flex items-center justify-center w-16 h-16 rounded-full bg-gray-800 text-white hover:bg-black hover:scale-110 transition-transform shadow-lg">
       <i class="fa-brands fa-github"></i>
     </a>
@@ -615,10 +652,10 @@
       <div>
         <h3 class="text-xl font-semibold text-white mb-4">Follow Me</h3>
         <div class="flex space-x-6 text-2xl">
-          <a href="https://www.linkedin.com/" target="_blank" class="hover:text-indigo-400 transition">
+          <a href="https://www.linkedin.com/in/devaraj-s-841bb7207" target="_blank" class="hover:text-indigo-400 transition">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="https://github.com/" target="_blank" class="hover:text-indigo-400 transition">
+          <a href="https://github.com/Devaraj012" target="_blank" class="hover:text-indigo-400 transition">
             <i class="fab fa-github"></i>
           </a>
         </div>
