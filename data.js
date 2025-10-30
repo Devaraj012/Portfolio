@@ -103,6 +103,7 @@ const portfolioData = {
   projects: [
     {
       title: "IPL 2023 Analysis",
+      category: "Data Analysis",
       description: "Exploratory data analysis of IPL 2023 covering team stats, player performance, and season insights.",
       technologies: ["Power BI", "Excel", "DAX"],
       image: "ipl-2023.jpg",
@@ -110,6 +111,7 @@ const portfolioData = {
     },
     {
       title: "Call-Centre Dashboard",
+      category: "Data Visualization",
       description: "Interactive dashboard to monitor call volumes, agent performance, and customer satisfaction in real time.",
       technologies: ["Power BI", "Excel"],
       image: "call-Centre.webp",
