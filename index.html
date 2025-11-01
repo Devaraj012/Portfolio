@@ -267,9 +267,6 @@
   <script src="data.js"></script>
 
 <script>
-  // Dynamically load name in logo
-  document.querySelector('h1.text-2xl').textContent = portfolioData.home.name;
-
   // Dynamically load desktop navbar
   const desktopNav = document.querySelector('header .container nav.hidden');
   desktopNav.innerHTML = portfolioData.navbar.map(link => `
