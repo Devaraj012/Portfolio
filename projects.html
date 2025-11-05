@@ -4,60 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Projects | Devaraj S</title>
-  <!-- Tailwind CSS -->
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome for Icons -->
+
+  <!-- Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <script src="data.js"></script>
+
+  <!-- Data -->
+
+<script src="data.js"></script>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-  <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
-    <div class="container mx-auto flex justify-between items-center py-5 px-6 lg:px-20">
-      <h1 class="text-2xl font-bold text-gray-900">Devaraj S</h1>
-      <nav class="hidden md:flex items-center space-x-4">
-        <a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a>
-        <a href="#" class="text-gray-800 hover:text-blue-600">Projects</a>
-      </nav>
+
+<body class="bg-[#f6f6f7] text-gray-900 font-sans antialiased">
+
+<!-- ✅ iOS Glass Header -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-2xl border-b border-white/50">
+  <div class="flex items-center justify-between py-3 px-4">
+
+    <!-- iOS Mobile Back Button -->
+    <a href="index.html"
+       class="md:hidden flex items-center gap-1 bg-white/60 backdrop-blur-lg text-gray-900 px-3 py-2 rounded-full border border-white/70 shadow-sm active:scale-95 transition-all">
+      <i class="fa-solid fa-chevron-left text-sm"></i>
+    </a>
+
+    <!-- iOS Desktop Back Button -->
+    <a href="index.html"
+       class="hidden md:flex items-center gap-2 bg-white/60 backdrop-blur-lg text-gray-900 px-5 py-2 rounded-full border border-white/70 shadow-sm active:scale-95 hover:bg-white transition-all">
+      <i class="fa-solid fa-chevron-left text-sm"></i>
+      <span class="font-medium tracking-tight">Back</span>
+    </a>
+
+  </div>
+</header>
+
+<!-- Page Spacing for fixed header -->
+<main class="pt-24 pb-20">
+
+  <section class="py-10">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- ✅ iOS Title Section -->
+      <div class="text-center mb-12">
+        <h2 class="text-[32px] font-semibold tracking-tight text-gray-900">
+          All <span class="text-blue-600">Projects</span>
+        </h2>
+        <p class="mt-3 text-[17px] text-gray-500">
+          Explore all my work in detail.
+        </p>
+      </div>
+
+      <!-- ✅ Project Grid -->
+      <div id="all-projects" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      </div>
+
     </div>
-  </header>
+  </section>
 
-  <main class="pt-24 pb-16">
-    <section class="py-16">
-      <div class="container mx-auto px-6 lg:px-20">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold text-gray-900">All <span class="text-indigo-600">Projects</span></h2>
-          <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Explore all my projects in detail.</p>
+</main>
+
+<!-- ✅ Script to fill projects -->
+<script>
+  const allProjectsContainer = document.getElementById('all-projects');
+
+  allProjectsContainer.innerHTML = portfolioData.projects.map(project => `
+    <div class="group bg-white rounded-3xl shadow-sm hover:shadow-xl active:scale-[0.99] transition-all overflow-hidden border border-gray-200/60">
+
+      <!-- Image -->
+      <div class="overflow-hidden rounded-t-3xl">
+        <img src="${project.image}" 
+             class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105">
+      </div>
+
+      <!-- Content -->
+      <div class="p-6">
+        <h3 class="text-[20px] font-semibold text-gray-900 mb-2 tracking-tight">${project.title}</h3>
+        <p class="text-gray-600 mb-4 text-[15px] leading-relaxed">${project.description}</p>
+
+        <!-- Tech Chips -->
+        <div class="flex flex-wrap gap-2 mb-4">
+          ${project.technologies.map(tech => `
+            <span class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full text-[13px] font-medium">
+              ${tech}
+            </span>
+          `).join('')}
         </div>
 
-        <div id="all-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <!-- Projects will be dynamically loaded here -->
+        <!-- Buttons -->
+        <div class="flex gap-3">
+          <a href="${project.githubLink}" target="_blank" 
+             class="bg-black text-white p-3 rounded-full hover:bg-gray-800 active:scale-95 transition flex items-center justify-center shadow">
+            <i class="fa-brands fa-github text-lg"></i>
+          </a>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  `).join('');
+</script>
 
-  <script>
-    // Dynamically load all projects
-    const allProjectsContainer = document.getElementById('all-projects');
-    allProjectsContainer.innerHTML = portfolioData.projects.map(project => `
-      <div class="group bg-white rounded-2xl shadow hover:shadow-2xl transition overflow-hidden">
-        <img src="${project.image}" class="w-full h-48 object-cover group-hover:scale-105 transition">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">${project.title}</h3>
-          <p class="text-gray-600 mb-4">${project.description}</p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            ${project.technologies.map(tech => `
-              <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm">${tech}</span>
-            `).join('')}
-          </div>
-          <div class="flex gap-3">
-            <a href="${project.githubLink}" target="_blank" class="bg-gray-900 text-white p-3 rounded-full hover:bg-gray-800 transition flex items-center justify-center">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    `).join('');
-  </script>
 </body>
-</html>
+</html
