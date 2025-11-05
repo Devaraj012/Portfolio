@@ -59,6 +59,19 @@ const portfolioData = {
           "Maintained and updated existing Power BI reports and dashboards to ensure data accuracy and relevance."
         ],
         logo: "I BACUS TECH SOLUTION PRIVATE LIMITED NEW LOGO.png"
+      },
+            {
+        date: "Jul 2023 - Oct 2023",
+        role: "Data Analyst Intern",
+        company: "Senchola",
+        companyLink: "https://senchola.com/",
+        description: [
+          "Assisted in collecting, cleaning, and analyzing datasets from multiple sources to support business operations and strategic decision-making.",
+          "Developed interactive dashboards and visualizations using Power BI to track business KPIs and identify trends.",
+          "Wrote SQL queries to extract, manipulate, and summarize data for reporting purposes.",
+          "Developed insightful data visualizations using Python libraries (Pandas, Matplotlib, and Scikit-learn) to analyze trends, patterns, and correlations in large datasets, enabling data-driven decision-making."
+        ],
+        logo: "senchola.png"
       }
     ]
   },
